@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./assets/images/myLogo.png">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Star Wars RPG!</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Star Wars RPG!</h1>
+        </header>
+        <div class="characters">
+            <div id="char1" class="card">
+                <div class="name">
+                    <span>Obi-Wan Kenobi</span>
+                </div>
+                <img src="./assets/images/obi.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp1">120</span>
+                </div>
+            </div>
+            <div id="char2" class="card">
+                <div class="name">
+                    <span>Luke Skywalker</span>
+                </div>
+                <img src="./assets/images/luke.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp2">100</span>
+                </div>
+            </div>
+            <div id="char3" class="card">
+                <div class="name">
+                    <span>Darth Sidious</span>
+                </div>
+                <img src="./assets/images/sidious.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp3">150</span>
+                </div>
+            </div>
+            <div id="char4" class="card">
+                <div class="name">
+                    <span>Darth Maul</span>
+                </div>
+                <img src="./assets/images/maul.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp4">180</span>
+                </div>
+            </div>
+            <h2 id="csChar">Choose your Character</h2>
+        </div>
+        <div class="enemies">
+            <div id="em1" class="card enemy">
+                <div class="name">
+                    <span>Obi-Wan Kenobi</span>
+                </div>
+                <img src="./assets/images/obi.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp1">120</span>
+                </div>
+            </div>
+            <div id="em2" class="card enemy">
+                <div class="name">
+                    <span>Luke Skywalker</span>
+                </div>
+                <img src="./assets/images/luke.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp2">100</span>
+                </div>
+            </div>
+            <div id="em3" class="card enemy">
+                <div class="name">
+                    <span>Darth Sidious</span>
+                </div>
+                <img src="./assets/images/sidious.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp3">150</span>
+                </div>
+            </div>
+            <div id="em4" class="card enemy">
+                <div class="name">
+                    <span>Darth Maul</span>
+                </div>
+                <img src="./assets/images/maul.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp4">180</span>
+                </div>
+            </div>
+            <h2 id="csEnmy">Choose your Enemy</h2>
+        </div>
+        <button class="attack">Attack</button>
+        <div class="defenders">
+            <div id="def1" class="card def">
+                <div class="name">
+                    <span>Obi-Wan Kenobi</span>
+                </div>
+                <img src="./assets/images/obi.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp1">120</span>
+                </div>
+            </div>
+            <div id="def2" class="card def">
+                <div class="name">
+                    <span>Luke Skywalker</span>
+                </div>
+                <img src="./assets/images/luke.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp2">100</span>
+                </div>
+            </div>
+            <div id="def3" class="card def">
+                <div class="name">
+                    <span>Darth Sidious</span>
+                </div>
+                <img src="./assets/images/sidious.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp3">150</span>
+                </div>
+            </div>
+            <div id="def4" class="card def">
+                <div class="name">
+                    <span>Darth Maul</span>
+                </div>
+                <img src="./assets/images/maul.jpg" alt="image of Obi-Wan Kenobi">
+                <div class="health">
+                    <span class="hp4">180</span>
+                </div>
+            </div>
+            <h2 id="def">Defender</h2>
+        </div>
+        <button class="start">Start Game</button>
+        <div class="message"></div>
+        <div class="win"></div>
+        <div class="lose"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="./assets/javascript/game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+h1 {
+    float: right;
+    text-align: right;
+    font-size: 3rem;
+    margin: 2rem;
+    margin-right: 8rem;
+    color: #ff0000;
+}
+
+.card {
+  display: inline-block;  
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  
+}
+
+.card:hover {
+    border: 4px solid #00ff00;
+    cursor: pointer;
+}
+
+#em1, #em2, #em3, #em4, #def1, #def2, #def3, #def4 {
+    background-color: #ff0000;
+}
+
+.attack {
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+.attack:hover, .start:hover {
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #ffffff;
+    background-color: #000;
+    padding: 0 2rem;
+}
+
+.start {
+    position: absolute;
+    left: 42vw;
+    top: 87vh;
+    height: 3rem;
+    width: 12rem;
+    font-size: 2rem;
+    color: #ff0000;
+}
+
+.message {
+    position: absolute;
+    left: 42vw;
+    top: 40vh;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff0000;
+    padding: 1rem;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+@keyframes spEffect {
+    0%   {color: red;}
+    25%   {color: purple;}
+    50%  {color: yellow;}
+    75%  {color: blue;}
+    100% {color: green;}
+}
+
+@keyframes spEffect2 {
+    0%   {transform: rotate3d(1,1,1,0deg);
+          font-size: 2rem;}
+    12%  {transform: rotate3d(1,1,1,46deg);
+          font-size: 3rem;}   
+    23%  {transform: rotate3d(1,1,1,72deg);
+          font-size: 4rem;}
+    34%  {transform: rotate3d(1,1,1,108deg);
+          font-size: 5rem;}
+    45%  {transform: rotate3d(1,1,1,144deg);
+          font-size: 6rem;}
+    56%  {transform: rotate3d(1,1,1,180deg);
+          font-size: 7rem;}
+    67%  {transform: rotate3d(1,1,1,216deg);
+          font-size: 8rem;}
+    78%  {transform: rotate3d(1,1,1,252deg);
+          font-size: 9rem;}
+    89%  {transform: rotate3d(1,1,1,324deg);
+          font-size: 10rem;}
+    100% {transform: rotate3d(1,1,1,360deg);
+          font-size: 11rem;}
+    
+}
+
+@keyframes spEffect3 {
+    0%   {transform: rotate3d(1,1,1,0deg);
+          font-size: 11rem;}
+    12%  {transform: rotate3d(1,1,1,46deg);
+          font-size: 10rem;}   
+    23%  {transform: rotate3d(1,1,1,72deg);
+          font-size: 9rem;}
+    34%  {transform: rotate3d(1,1,1,108deg);
+          font-size: 8rem;}
+    45%  {transform: rotate3d(1,1,1,144deg);
+          font-size: 7rem;}
+    56%  {transform: rotate3d(1,1,1,180deg);
+          font-size: 6rem;}
+    67%  {transform: rotate3d(1,1,1,216deg);
+          font-size: 5rem;}
+    78%  {transform: rotate3d(1,1,1,252deg);
+          font-size: 4rem;}
+    89%  {transform: rotate3d(1,1,1,324deg);
+          font-size: 3rem;}
+    100% {transform: rotate3d(1,1,1,360deg);
+          font-size: 2rem;}
+    
+}
+
+.win {
+    position: absolute;
+    left: 35vw;
+    top: 40vh;
+    text-align: center;
+    font-size: 5rem;
+    color: #ff0000;
+    padding: 1rem;
+    animation-name: spEffect, spEffect2;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+.lose {
+    position: absolute;
+    left: 35vw;
+    top: 40vh;
+    text-align: center;
+    font-size: 5rem;
+    color: #ff0000;
+    padding: 1rem;
+    animation-name: spEffect, spEffect3;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
