@@ -47,8 +47,6 @@ $(document).ready(() => {
 
     $('.attack').click(() => {
         attack(player1, currentEnemy);
-        console.log(currentEnemy.cap);
-        console.log(player1);
     });
 
     $('.start').click(() => {
@@ -215,12 +213,12 @@ $(document).ready(() => {
             maulSelect.play();
         });
 
-        
+
 
     });
 
     function attack(p1, cEnmy) {
-        
+
         lsOn.play();
         dmgFactor.push(p1.ap);
         cEnmy.hp -= p1.ap;
