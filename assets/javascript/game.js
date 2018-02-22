@@ -80,6 +80,7 @@ $(document).ready(() => {
 
         $('.win').hide();
         $('.lose').hide();
+        $('.start').hide();
 
         $('#char1').show();
         $('#char2').show();
@@ -324,6 +325,7 @@ $(document).ready(() => {
         $('#csEnmy').hide();
         $('.lose').html('Game Over');
         $('.lose').show();
+        $('.start').show();
     }
 
     function win() {
@@ -336,6 +338,7 @@ $(document).ready(() => {
         $('#csEnmy').hide();
         $('.win').html('You win!!!');
         $('.win').show();
+        $('.start').show();
     }
 
     function Player(name, healthPoints, attackPower, ctrAttackPower, wasPicked) {
