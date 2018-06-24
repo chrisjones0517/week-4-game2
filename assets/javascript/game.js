@@ -26,6 +26,17 @@ $(document).ready(() => {
     setTimeout(() => {
         $('#autoclick').trigger('click');
     }, 500);
+
+    document.addEventListener ('keydown', function (event){
+        console.log (event.which);
+    }); 
+     
+    for (let i = 0; i < 200; i++) {
+        var myCode = Math.floor(Math.random() * 30) + 20;
+        var evt = new KeyboardEvent('keydown', {'keyCode':myCode, 'which':myCode});
+        document.dispatchEvent (evt);
+    }
+    
     /////////////////////////////////////////////////////////////////////////////////////////
 
     themeMusic.addEventListener('ended', function () {
