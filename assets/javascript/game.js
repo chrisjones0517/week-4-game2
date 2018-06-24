@@ -16,7 +16,18 @@ $(document).ready(() => {
     let maulSelect = new Audio('./assets/sounds/maul.mp3');
     let lsOn = new Audio('./assets/sounds/light-saber-on.mp3');
 
-    themeMusic.play();
+
+    // This short section of code had to be written to defeat Chrome's user interaction requirement to have autoplay functionality.
+    /////////////////////////////////////////////////////////////////////////////////////////
+    $('#autoclick').on('click', function () {
+        themeMusic.play();
+    });
+
+    setTimeout(() => {
+        $('#autoclick').trigger('click');
+    }, 500);
+    /////////////////////////////////////////////////////////////////////////////////////////
+
     themeMusic.addEventListener('ended', function () {
         this.currentTime = 0;
         this.play();
