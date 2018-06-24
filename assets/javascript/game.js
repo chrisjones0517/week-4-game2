@@ -16,12 +16,11 @@ $(document).ready(() => {
     let maulSelect = new Audio('./assets/sounds/maul.mp3');
     let lsOn = new Audio('./assets/sounds/light-saber-on.mp3');
 
+    themeMusic.play();
     themeMusic.addEventListener('ended', function () {
         this.currentTime = 0;
         this.play();
     }, false);
-
-    themeMusic.play();
 
     $('#char1').hide();
     $('#char2').hide();

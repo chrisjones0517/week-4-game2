@@ -63,6 +63,10 @@ h2 {
     color: #ff0000;
 }
 
+.start:hover {
+    color: #00ff00;
+}
+
 .message {
     position: absolute;
     left: 42vw;
