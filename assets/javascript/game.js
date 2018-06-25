@@ -16,42 +16,43 @@ $(document).ready(() => {
     let maulSelect = new Audio('./assets/sounds/maul.mp3');
     let lsOn = new Audio('./assets/sounds/light-saber-on.mp3');
 
+
+
+    // This short section of code I attempted to defeat Chrome's user interaction requirement to have autoplay functionality.
+    // It's a work in progress
+    /////////////////////////////////////////////////////////////////////////////////////////
     themeMusic.muted = true;
     themeMusic.play();
 
-    // This short section of code had to be written to defeat Chrome's user interaction requirement to have autoplay functionality.
-    /////////////////////////////////////////////////////////////////////////////////////////
+    setTimeout(() => {
+        var shortInterval = Math.random() * 10 + 10;
 
-    
+        document.addEventListener('keyup', function (event) {
+            setTimeout(() => {
+                themeMusic.muted = false;
+            }, shortInterval);
+        });
+
+        var myInterval = Math.floor(Math.random() * 97) + 200;
+        var myInterval2 = Math.random() * 23 + 50;
+
         setTimeout(() => {
-            var shortInterval = Math.random() * 10 + 10;
-
-            document.addEventListener('keyup', function (event) {
-                setTimeout(() => {
-                    themeMusic.muted = false;
-                }, shortInterval);
-            });
-
-            var myInterval = Math.floor(Math.random() * 97) + 200;
-            var myInterval2 = Math.random() * 23 + 50;
+            var evt1 = new KeyboardEvent('keypress', { 'keyCode': 32, 'which': 32 });
+            document.dispatchEvent(evt1);
 
             setTimeout(() => {
-                var evt1 = new KeyboardEvent('keypress', { 'keyCode': 32, 'which': 32 });
-                document.dispatchEvent(evt1);
-                
-                setTimeout(() => {
-                    var evt2 = new KeyboardEvent('keyup', { 'keyCode': 32, 'which': 32 });
-                    document.dispatchEvent(evt2);
-                    
-                }, myInterval2);
+                var evt2 = new KeyboardEvent('keyup', { 'keyCode': 32, 'which': 32 });
+                document.dispatchEvent(evt2);
+
+            }, myInterval2);
 
 
-            }, myInterval);
-        }, 1200);
-    
+        }, myInterval);
+    }, 3400);
+
 
     /////////////////////////////////////////////////////////////////////////////////////////
-        
+
     themeMusic.addEventListener('ended', function () {
         this.currentTime = 0;
         this.play();
