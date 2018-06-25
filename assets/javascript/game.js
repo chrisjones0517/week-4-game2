@@ -28,10 +28,6 @@ $(document).ready(() => {
                 setTimeout(() => {
                     themeMusic.play();
                 }, shortInterval);
-
-                // console.log(event.which);
-                // console.log(Date.now());
-
             });
 
             var myInterval = Math.floor(Math.random() * 97) + 200;
@@ -40,16 +36,16 @@ $(document).ready(() => {
             setTimeout(() => {
                 var evt1 = new KeyboardEvent('keydown', { 'keyCode': 32, 'which': 32 });
                 document.dispatchEvent(evt1);
-                // console.log(Date.now());
+                
                 setTimeout(() => {
                     var evt2 = new KeyboardEvent('keyup', { 'keyCode': 32, 'which': 32 });
                     document.dispatchEvent(evt2);
-                    // console.log(Date.now());
+                    
                 }, myInterval2);
 
 
             }, myInterval);
-        }, 3200);
+        }, 2200);
     
 
     /////////////////////////////////////////////////////////////////////////////////////////
