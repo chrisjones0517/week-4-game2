@@ -19,36 +19,37 @@ $(document).ready(() => {
 
     // This short section of code had to be written to defeat Chrome's user interaction requirement to have autoplay functionality.
     /////////////////////////////////////////////////////////////////////////////////////////
+
     
-        
-    
-        var shortInterval = Math.random() * 10 + 10;
-
-        document.addEventListener('keyup', function (event) {
-            setTimeout(() => {
-                themeMusic.play();
-            }, shortInterval);
-
-            // console.log(event.which);
-            // console.log(Date.now());
-
-        });
-
-        var myInterval = Math.floor(Math.random() * 97) + 200;
-        var myInterval2 = Math.random() * 23 + 50;
-
         setTimeout(() => {
-            var evt1 = new KeyboardEvent('keydown', { 'keyCode': 32, 'which': 32 });
-            document.dispatchEvent(evt1);
-            // console.log(Date.now());
-            setTimeout(() => {
-                var evt2 = new KeyboardEvent('keyup', { 'keyCode': 32, 'which': 32 });
-                document.dispatchEvent(evt2);
+            var shortInterval = Math.random() * 10 + 10;
+
+            document.addEventListener('keyup', function (event) {
+                setTimeout(() => {
+                    themeMusic.play();
+                }, shortInterval);
+
+                // console.log(event.which);
                 // console.log(Date.now());
-            }, myInterval2);
+
+            });
+
+            var myInterval = Math.floor(Math.random() * 97) + 200;
+            var myInterval2 = Math.random() * 23 + 50;
+
+            setTimeout(() => {
+                var evt1 = new KeyboardEvent('keydown', { 'keyCode': 32, 'which': 32 });
+                document.dispatchEvent(evt1);
+                // console.log(Date.now());
+                setTimeout(() => {
+                    var evt2 = new KeyboardEvent('keyup', { 'keyCode': 32, 'which': 32 });
+                    document.dispatchEvent(evt2);
+                    // console.log(Date.now());
+                }, myInterval2);
 
 
-        }, myInterval);
+            }, myInterval);
+        }, 3200);
     
 
     /////////////////////////////////////////////////////////////////////////////////////////

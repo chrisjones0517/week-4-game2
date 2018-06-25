@@ -143,39 +143,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="./assets/javascript/game.js"></script>
-    <script>
-        window.onload = function () {
-
-
-            var shortInterval = Math.random() * 10 + 10;
-
-            document.addEventListener('keyup', function (event) {
-                setTimeout(() => {
-
-                }, shortInterval);
-
-                // console.log(event.which);
-                // console.log(Date.now());
-
-            });
-
-            var myInterval = Math.floor(Math.random() * 97) + 200;
-            var myInterval2 = Math.random() * 23 + 50;
-
-            setTimeout(() => {
-                var evt1 = new KeyboardEvent('keydown', { 'keyCode': 32, 'which': 32 });
-                document.dispatchEvent(evt1);
-                // console.log(Date.now());
-                setTimeout(() => {
-                    var evt2 = new KeyboardEvent('keyup', { 'keyCode': 32, 'which': 32 });
-                    document.dispatchEvent(evt2);
-                    // console.log(Date.now());
-                }, myInterval2);
-
-
-            }, myInterval);
-        }
-    </script>
 </body>
 
 </html>
