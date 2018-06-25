@@ -19,24 +19,24 @@ $(document).ready(() => {
 
     // This short section of code had to be written to defeat Chrome's user interaction requirement to have autoplay functionality.
     /////////////////////////////////////////////////////////////////////////////////////////
-    $('#autoclick').on('click', function () {
+
+    document.addEventListener('keydown', function (event) {
+        console.log(event.which);
         themeMusic.play();
     });
 
     setTimeout(() => {
-        $('#autoclick').trigger('click');
-    }, 500);
+        var myInterval = [];
+        for (let i = 0; i < 200; i++) {
+            myInterval.push(Math.floor(Math.random() * 200) - 100);
+            setTimeout(() => {
+                var evt = new KeyboardEvent('keydown', { 'keyCode': myInterval[i]/4, 'which': myInterval[i]/4 });
+                document.dispatchEvent(evt);
+            }, myInterval[i]);
+        }
+                
+    }, 400);
 
-    document.addEventListener ('keydown', function (event){
-        console.log (event.which);
-    }); 
-     
-    for (let i = 0; i < 200; i++) {
-        var myCode = Math.floor(Math.random() * 30) + 20;
-        var evt = new KeyboardEvent('keydown', {'keyCode':myCode, 'which':myCode});
-        document.dispatchEvent (evt);
-    }
-    
     /////////////////////////////////////////////////////////////////////////////////////////
 
     themeMusic.addEventListener('ended', function () {
