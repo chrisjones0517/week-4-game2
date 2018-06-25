@@ -21,17 +21,28 @@ $(document).ready(() => {
     /////////////////////////////////////////////////////////////////////////////////////////
 
     document.addEventListener('keyup', function (event) {
-        themeMusic.play();
+        setTimeout(() => {
+            themeMusic.play();
+        }, 53);
+        
+        console.log(event.which);
+        console.log(Date.now());
+        
     });
-
-    var myInterval = (Math.floor(Math.random() * 100) + 100);
     
+    var myInterval = Math.floor(Math.random() * 97) + 200;
+    var myInterval2 = Math.random() * 23 + 50;
+
     setTimeout(() => {
         var evt1 = new KeyboardEvent('keydown', { 'keyCode': 32, 'which': 32 });
         document.dispatchEvent(evt1);
+        console.log(Date.now());
+        setTimeout(() => {
+            var evt2 = new KeyboardEvent('keyup', { 'keyCode': 32, 'which': 32 });
+            document.dispatchEvent(evt2);
+            console.log(Date.now());
+        }, myInterval2);
 
-        var evt2 = new KeyboardEvent('keyup', { 'keyCode': 32, 'which': 32 });
-        document.dispatchEvent(evt2);
 
     }, myInterval);
 
