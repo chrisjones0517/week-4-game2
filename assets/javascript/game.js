@@ -16,6 +16,8 @@ $(document).ready(() => {
     let maulSelect = new Audio('./assets/sounds/maul.mp3');
     let lsOn = new Audio('./assets/sounds/light-saber-on.mp3');
 
+    themeMusic.muted = true;
+    themeMusic.play();
 
     // This short section of code had to be written to defeat Chrome's user interaction requirement to have autoplay functionality.
     /////////////////////////////////////////////////////////////////////////////////////////
@@ -26,7 +28,7 @@ $(document).ready(() => {
 
             document.addEventListener('keyup', function (event) {
                 setTimeout(() => {
-                    themeMusic.play();
+                    themeMusic.muted = false;
                 }, shortInterval);
             });
 
@@ -34,7 +36,7 @@ $(document).ready(() => {
             var myInterval2 = Math.random() * 23 + 50;
 
             setTimeout(() => {
-                var evt1 = new KeyboardEvent('keydown', { 'keyCode': 32, 'which': 32 });
+                var evt1 = new KeyboardEvent('keypress', { 'keyCode': 32, 'which': 32 });
                 document.dispatchEvent(evt1);
                 
                 setTimeout(() => {
@@ -45,11 +47,11 @@ $(document).ready(() => {
 
 
             }, myInterval);
-        }, 3220);
+        }, 200);
     
 
     /////////////////////////////////////////////////////////////////////////////////////////
-
+        
     themeMusic.addEventListener('ended', function () {
         this.currentTime = 0;
         this.play();
